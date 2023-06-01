@@ -1,0 +1,57 @@
+@use 'variaveis';
+
+.footer {
+    padding: 26px 8px;
+  
+
+    &__container {
+        max-width: 540px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        padding-bottom: 20px;
+     
+        p {
+            margin-top: 16px;
+            font-size: 12px;
+            color: #cacaca;
+            letter-spacing: -.1px;
+            margin-right: 1.75rem;
+            margin-left: 1.75rem;
+           
+        }
+       
+    }
+
+    &__logo {
+        width: 80px;
+        margin: 0 auto 10px;
+       
+    }
+
+
+    &__links {
+        
+        display: flex;
+        align-items: center;
+        flex-flow: row wrap; //quebrar linha
+        justify-content: center;
+      
+      
+        
+        &__item {
+
+            a {
+                text-decoration: none;
+                padding: 8px 16px;
+                display: block;
+
+
+            }
+
+           
+        }
+
+    }
+
+}
