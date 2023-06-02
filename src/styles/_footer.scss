@@ -2,22 +2,28 @@
 
 .footer {
     padding: 26px 8px;
+    background-color: variaveis.$corDeFundo;
+    position: relative;
+    margin-top: 100px;
+
   
 
     &__container {
-        max-width: 540px;
+        max-width: 560px;
         width: 100%;
         margin: 0 auto;
         text-align: center;
         padding-bottom: 20px;
      
         p {
-            margin-top: 16px;
+            margin-top: 5px;
             font-size: 12px;
             color: #cacaca;
             letter-spacing: -.1px;
+            line-height: 1.5;
             margin-right: 1.75rem;
             margin-left: 1.75rem;
+            text-align: center;
            
         }
        
