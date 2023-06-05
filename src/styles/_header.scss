@@ -1,111 +1,107 @@
 @use 'variaveis';
 
 .header {
-    position: sticky; //acompanhando todo a pagina
-    top: 0;
-    left: 0;
-    background-color: variaveis.$corDeFundo;
-    transition: background-color .5s ease;
-    z-index: 1;
+
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    left: 0px;
+    padding: 0px 1em;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    z-index: 9;
+    height: inherit;
     
-
-    &--is-hidden {
-        background-color: transparent;
-        transition: background-color .5s ease;
-
-            .header {
-                &__logo, &__links__item:first-child {
-                    opacity: 0;
-                    visibility: hidden;
-                    transition: opacity .5s ease;
-                }
-            }
-        }
-
-    &__container {
-        
-        padding: 8px 36px;
+    &__menu {
+        align-items: center;
         display: flex;
+        flex-flow: row nowrap;
         justify-content: space-between;
-        
-        @media (max-width: 768px) {
-            padding: 0 12px 0 20px;
-        }
+        left: 0px;
+        padding: 0px 20px;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        transition: all 0.2s ease-in-out 0s;
+        will-change: background-color, height;
+        height: 72px;
+        z-index: 1;
+        background-color: #0e0b14;
     }
 
     &__logo {
-        max-width: 80px;
-        width: 100%;
-        margin: 5px;
-        transition: opacity .5s ease;
 
-        @media (max-width: 768px) {
-            max-width: 64px;
+        img {
+    
+            width: 70px;
+            margin: 0 auto 10px;
+            margin-top: 10px;
         }
-    }
-
-    &__links {
-        display: flex;
-     
-
-        &__item {
-            margin: 5px;
-            transition: opacity .5s ease;
-            
-        }
-    }
-
-    .button {
-        height: 40px;
-        
-      
-        @media (max-width: 768px) {
-            font-size: 13px;
-            padding: 8px 11px;
-            height: 40px;
-            letter-spacing: 0;
     }
 }
 
-}
 
-.button {
-    display: flex;
+.header__buttons {
+
+        &__button {
+            display: flex;
+            height: inherit;
+            place-content: center flex-end;
+            align-items: center;
+            justify-self: flex-end;
+            position: absolute;
+            top: 0px;
+            right: 20px;
+            width: 50%;
+        }
+    }
+
+.button1 {
     align-items: center;
-    justify-content: center;
-    width: 100%;
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: variaveis.$corTextoSecundario;
-    background-color: variaveis.$corDeFundoBotaoPrimario;
-    text-transform: uppercase;
-    border-radius: 6px;
-    text-decoration: none;
-    padding: 0px 16px;
-    letter-spacing: 1.5px;
-    border: 1px solid variaveis.$corDeFundoBotaoPrimario;
     cursor: pointer;
-    transition: all .2s ease-in-out 0s;
+    display: flex;
+    flex-shrink: 0;
+    height: 40px;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.2s ease-in-out 0s;
+    width: auto;
     opacity: 1;
+    visibility: visible;
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    line-height: 1.6;
+    outline: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0px 16px;
+    white-space: normal;
+    max-width: max-content;
+    position: relative;
+    background: #0072d2;
+    color: #f9f9f9;
+    border: 0;
+    border-radius: 0.25rem;
 
-    &--secondary {
-        background-color: variaveis.$corDeFundoBotaoSecundario;
-        border-color: variaveis.$corDeFundoBotaoSecundario;
-
-        &:hover {
-            background-color: lighten(variaveis.$corDeFundoBotaoSecundario, 4%);
-        }
+    &:hover {
+        background-color: lighten(variaveis.$corDeFundoBotaoPrimario, 3%);
     }
+}
 
-    &--dark {
-        background-color: rgba($color: variaveis.$corDeFundoBotaoDark, $alpha: 0.8);
-        border-color: variaveis.$corTextoSecundario;
-     
-        &:hover {
+
+.button--outline {
+    background: #00000099;
+    border: 1px solid #f9f9f9;
+    color: #f9f9f9;
+    border-radius: 0.25rem;
+    margin: 10px;
+    
+    &:hover {
         background-color: variaveis.$corTextoSecundario;
         color: variaveis.$corDeFundo;
-    }
-
-    }
-
- }
+}
+}
